@@ -1,0 +1,57 @@
+.sidebar__wrapper {
+  height: 100%;
+  width: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-right: 1px solid #3b3b3b;
+
+  .sidebar__logo {
+    width: 1.3rem;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+
+  .sidebar__menus {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    width: 100%;
+    .sidebar__menu__wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      height: 2.5rem;
+      &.active {
+        border-left: 2px solid white;
+
+        img {
+          svg {
+            fill: #ffffff;
+          }
+        }
+      }
+      .sidebar__menu {
+        width: 1.2rem;
+        margin-right: 2px;
+      }
+    }
+  }
+  .sidebar__user {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 2.5rem;
+    margin-top: auto;
+    margin-bottom: 1rem;
+
+    .sidebar__user__circle {
+      width: 1.7rem;
+      border-radius: 50%;
+    }
+  }
+}

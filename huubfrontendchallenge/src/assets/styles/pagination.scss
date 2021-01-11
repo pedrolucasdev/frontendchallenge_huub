@@ -1,0 +1,23 @@
+.ngx-pagination {
+  margin-top: 4rem;
+  padding-inline-start: 0px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.95rem;
+  button,
+  a {
+    color: white !important;
+
+    &:hover {
+      background-color: #3d4144 !important;
+    }
+  }
+
+  .current {
+    background-color: #131313 !important;
+  }
+
+  .disabled {
+    color: #3b3b3b !important;
+  }
+}

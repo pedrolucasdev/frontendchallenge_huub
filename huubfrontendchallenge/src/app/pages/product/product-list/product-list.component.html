@@ -1,1 +1,43 @@
-<p>product-list works!</p>
+<div class="product__list__wrapper">
+  <sidebar></sidebar>
+  <div class="product__list__content">
+    <div class="product__list__table__wrapper">
+      <h3 class="product__list__table__title">Products</h3>
+
+      <div class="product__list__table__container">
+        <table class="product__list__table">
+          <tr>
+            <th class="product__list__table__id">Identifier</th>
+            <th class="product__list__table__name">Name</th>
+          </tr>
+          <ng-container
+            *ngFor="
+              let p of products
+                | paginate
+                  : {
+                      itemsPerPage: pageSize,
+                      currentPage: page,
+                      totalItems: total
+                    }
+            "
+          >
+            <tr
+              style="cursor: pointer"
+              [ngClass]="{
+                active: selectedProduct && selectedProduct.id === p.id
+              }"
+              (click)="onProductSelected(p)"
+            >
+              <td>{{ p.id }}</td>
+              <td>{{ p.name }}</td>
+            </tr>
+          </ng-container>
+        </table>
+      </div>
+      <pagination-controls
+        (pageChange)="changePage($event)"
+      ></pagination-controls>
+    </div>
+    <product-details [product]="selectedProduct"></product-details>
+  </div>
+</div>

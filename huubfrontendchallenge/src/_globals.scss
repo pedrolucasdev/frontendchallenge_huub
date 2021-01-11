@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -15,4 +17,20 @@ body {
   padding: 0px;
   background-color: #202020;
   color: #ffffff;
+  font-family: "Space Mono", monospace;
+}
+
+input,
+button {
+  font-family: "Space Mono", monospace;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.flexCentered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

@@ -1,1 +1,29 @@
-<p>login works!</p>
+<div class="login__wrapper flexCentered">
+  <h3>Welcome to the HUUB Frontend Challenge</h3>
+  <div class="login__inputs">
+    <div class="login__input">
+      <label for="email">Email:</label>
+      <input
+        type="text"
+        id="email"
+        spellcheck="false"
+        [(ngModel)]="inputData.email"
+        (ngModelChange)="resetError()"
+      />
+    </div>
+    <div class="login__input">
+      <label for="password">Pasword:</label>
+      <input
+        [type]="passwordInputType"
+        id="password"
+        spellcheck="false"
+        [(ngModel)]="inputData.password"
+        (ngModelChange)="resetError()"
+      />
+    </div>
+  </div>
+  <div class="login__error flexCentered">
+    <span *ngIf="error != ''">{{ error }}</span>
+  </div>
+  <button class="login__action" (click)="login()">Log in</button>
+</div>

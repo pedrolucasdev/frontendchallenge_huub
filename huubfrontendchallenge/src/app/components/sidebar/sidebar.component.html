@@ -1,0 +1,24 @@
+<div class="sidebar__wrapper">
+  <a href="">
+    <img src="../../../assets/media/logo.svg" class="sidebar__logo" />
+  </a>
+  <div class="sidebar__menus">
+    <div
+      class="sidebar__menu__wrapper"
+      [ngClass]="{ active: isAtProductList }"
+      (click)="onProductListClick()"
+    >
+      <img
+        [src]="
+          isAtProductList
+            ? '../../../assets/media/product_white.svg'
+            : '../../../assets/media/product.svg'
+        "
+        class="sidebar__menu"
+      />
+    </div>
+  </div>
+  <div class="sidebar__user">
+    <img class="sidebar__user__circle" src="../../../assets/media/user.png" />
+  </div>
+</div>

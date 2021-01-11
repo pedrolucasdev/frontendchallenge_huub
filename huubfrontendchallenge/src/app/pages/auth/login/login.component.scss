@@ -1,0 +1,58 @@
+.login__wrapper {
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+
+  .login__inputs {
+    width: 22vw;
+    margin-top: 1.5rem;
+
+    .login__input {
+      display: flex;
+      align-items: center;
+
+      &:not(:first-child) {
+        margin-top: 1rem;
+      }
+
+      input {
+        margin-left: auto;
+        outline: none;
+        border: none;
+        height: 2.5rem;
+        padding: 8px;
+        width: 17vw;
+        border-radius: 8px;
+      }
+    }
+  }
+
+  .login__error {
+    width: 22vw;
+    height: 2rem;
+    margin-top: 2rem;
+    color: red;
+
+    span {
+      text-align: center;
+    }
+  }
+
+  .login__action {
+    margin-top: 2rem;
+    height: 2.5rem;
+    padding: 0 2rem;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid #ffffff;
+    border-radius: 8px;
+    color: #ffffff;
+    font-weight: 600;
+
+    &:hover {
+      background-color: #ffffff;
+      color: #202020;
+      border-color: #ffffff;
+    }
+  }
+}
