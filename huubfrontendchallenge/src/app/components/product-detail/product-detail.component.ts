@@ -15,4 +15,7 @@ export class ProductDetailComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  valueNotEmpty(value: string) {
+    return value != undefined && value != '';
+  }
 }

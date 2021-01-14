@@ -18,6 +18,10 @@ body {
   background-color: #202020;
   color: #ffffff;
   font-family: "Space Mono", monospace;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 input,

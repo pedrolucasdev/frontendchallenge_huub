@@ -19,6 +19,14 @@
     </div>
   </div>
   <div class="sidebar__user">
-    <img class="sidebar__user__circle" src="../../../assets/media/user.png" />
+    <img
+      class="sidebar__user__circle"
+      src="../../../assets/media/user.png"
+      [matMenuTriggerFor]="menu"
+    />
   </div>
 </div>
+
+<mat-menu #menu="matMenu">
+  <button class="user__menu__logout" (click)="onLogout()">Logout</button>
+</mat-menu>

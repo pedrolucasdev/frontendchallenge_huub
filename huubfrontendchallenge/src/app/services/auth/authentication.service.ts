@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { LoginDTO } from './../../model/auth/login-dto';
 import { LoginResult } from './../../model/auth/login-result';
 import { Injectable } from '@angular/core';
@@ -16,7 +17,7 @@ export class AuthenticationService {
   private currentTokenSubject: BehaviorSubject<string>;
   public currentToken: Observable<string>;
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router: Router) {
     this.currentTokenSubject = new BehaviorSubject<string>(localStorage.getItem('jwt'));
     this.currentToken = this.currentTokenSubject.asObservable();
   }
@@ -42,5 +43,6 @@ export class AuthenticationService {
   logout() {
     localStorage.removeItem('jwt');
     this.currentTokenSubject.next(null);
+    this.router.navigate(["login"]);
   }
 }

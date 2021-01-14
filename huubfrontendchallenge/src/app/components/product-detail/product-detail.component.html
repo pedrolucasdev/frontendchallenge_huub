@@ -1,4 +1,77 @@
 <div class="product__details__wrapper" *ngIf="product">
   <h4 class="product__details__title">{{ product.name | uppercase }}</h4>
   <span class="product__details__title">{{ product.description }}</span>
+  <div class="product__details__summary">
+    <div class="product__details__summary__title">
+      <img src="../../../assets/media/summary.svg" />
+      <span>Summary</span>
+    </div>
+    <div class="product__details__summary__item">
+      <span class="product__details__summary__item__label">Supplier</span>
+      <span class="product__details__summary__item__value">{{
+        valueNotEmpty(product.supplier) ? product.supplier : "-"
+      }}</span>
+    </div>
+    <div class="product__details__summary__item">
+      <span class="product__details__summary__item__label">Season</span>
+      <span class="product__details__summary__item__value">{{
+        valueNotEmpty(product.season) ? product.season : "-"
+      }}</span>
+    </div>
+    <div class="product__details__summary__item">
+      <span class="product__details__summary__item__label">Family</span>
+      <span class="product__details__summary__item__value">{{
+        valueNotEmpty(product.family) ? product.family : "-"
+      }}</span>
+    </div>
+    <div class="product__details__summary__item">
+      <span class="product__details__summary__item__label">Subfamily</span>
+      <span class="product__details__summary__item__value">{{
+        valueNotEmpty(product.subfamily) ? product.subfamily : "-"
+      }}</span>
+    </div>
+    <div class="product__details__summary__item">
+      <span class="product__details__summary__item__label">Type</span>
+      <span class="product__details__summary__item__value">{{
+        valueNotEmpty(product.type) ? product.type : "-"
+      }}</span>
+    </div>
+    <div class="product__details__summary__item">
+      <span class="product__details__summary__item__label">Fabric</span>
+      <span class="product__details__summary__item__value">{{
+        valueNotEmpty(product.fabric) ? product.fabric : "-"
+      }}</span>
+    </div>
+    <div class="product__details__summary__item">
+      <span class="product__details__summary__item__label">Currency</span>
+      <span class="product__details__summary__item__value">{{
+        valueNotEmpty(product.currency_iso3code)
+          ? product.currency_iso3code
+          : "-"
+      }}</span>
+    </div>
+  </div>
+
+  <div class="product__details__variants">
+    <div class="product__details__variants__title">
+      <img src="../../../assets/media/variant.svg" />
+      <span>Variants</span>
+    </div>
+    <div class="product__details__variants__item header">
+      <div class="product__details__variants__item__first-column">Ean</div>
+      <div class="product__details__variants__item__second-column">
+        Reference
+      </div>
+    </div>
+    <ng-container *ngFor="let variant of product.variants">
+      <div class="product__details__variants__item">
+        <div class="product__details__variants__item__first-column">
+          {{ variant.ean }}
+        </div>
+        <div class="product__details__variants__item__second-column">
+          {{ variant.reference }}
+        </div>
+      </div>
+    </ng-container>
+  </div>
 </div>
