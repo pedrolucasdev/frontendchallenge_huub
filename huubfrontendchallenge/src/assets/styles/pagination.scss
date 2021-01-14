@@ -4,6 +4,15 @@
   display: flex;
   justify-content: flex-end;
   font-size: 0.95rem;
+  @media (max-width: 767px) {
+    font-size: 0.6rem;
+    li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
   button,
   a {
     color: white !important;

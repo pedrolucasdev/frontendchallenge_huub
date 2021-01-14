@@ -6,10 +6,22 @@
   align-items: center;
   border-right: 1px solid #3b3b3b;
 
+  @media (max-width: 767px) {
+    flex-direction: row;
+    width: 100%;
+    height: 3rem;
+    border-right: 0px;
+    border-bottom: 1px solid #3b3b3b;
+  }
+
   .sidebar__logo {
     width: 1.3rem;
     margin-top: 1rem;
     cursor: pointer;
+    @media (max-width: 767px) {
+      margin-top: 0;
+      margin-left: 1rem;
+    }
   }
 
   .sidebar__menus {
@@ -17,6 +29,15 @@
     flex-direction: column;
     margin-top: 3rem;
     width: 100%;
+
+    @media (max-width: 767px) {
+      margin-top: 0;
+      width: 40%;
+      flex-direction: row;
+      margin-left: 3rem;
+      height: 100%;
+    }
+
     .sidebar__menu__wrapper {
       width: 100%;
       display: flex;
@@ -24,15 +45,26 @@
       align-items: center;
       cursor: pointer;
       height: 2.5rem;
+
+      @media (max-width: 767px) {
+        width: 3rem;
+      }
+
       &.active {
-        border-left: 2px solid white;
+        border-left: 2px solid #ffffff;
 
         img {
           svg {
             fill: #ffffff;
           }
         }
+
+        @media (max-width: 767px) {
+          border-left: 0px;
+          border-top: 2px solid #ffffff;
+        }
       }
+
       .sidebar__menu {
         width: 1.2rem;
         margin-right: 2px;
@@ -48,6 +80,14 @@
     height: 2.5rem;
     margin-top: auto;
     margin-bottom: 1rem;
+
+    @media (max-width: 767px) {
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: auto;
+      margin-right: 2rem;
+      width: 1.7rem;
+    }
 
     .sidebar__user__circle {
       width: 1.7rem;

@@ -1,6 +1,8 @@
 <div class="product__details__wrapper" *ngIf="product">
-  <h4 class="product__details__title">{{ product.name | uppercase }}</h4>
-  <span class="product__details__title">{{ product.description }}</span>
+  <h4 class="product__details__title">
+    Details: {{ product.name | uppercase }}
+  </h4>
+  <span class="product__details__description">{{ product.description }}</span>
   <div class="product__details__summary">
     <div class="product__details__summary__title">
       <img src="../../../assets/media/summary.svg" />
@@ -65,7 +67,10 @@
     </div>
     <ng-container *ngFor="let variant of product.variants">
       <div class="product__details__variants__item">
-        <div class="product__details__variants__item__first-column">
+        <div
+          class="product__details__variants__item__first-column"
+          [attr.title]="variant.ean"
+        >
           {{ variant.ean }}
         </div>
         <div class="product__details__variants__item__second-column">

@@ -6,6 +6,16 @@
   .login__inputs {
     width: 22vw;
     margin-top: 1.5rem;
+    /* Portrait tablet to landscape and desktop */
+
+    @media (min-width: 768px) and (max-width: 1025px) {
+      width: 40vw;
+    }
+
+    /* Landscape phone to portrait tablet */
+    @media (max-width: 767px) {
+      width: 60vw;
+    }
 
     .login__input {
       display: flex;
@@ -23,6 +33,14 @@
         padding: 8px;
         width: 17vw;
         border-radius: 8px;
+
+        @media (min-width: 768px) and (max-width: 1025px) {
+          width: 25vw;
+        }
+
+        @media (max-width: 767px) {
+          width: 35vw;
+        }
       }
     }
   }
