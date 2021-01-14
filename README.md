@@ -1,4 +1,4 @@
-# Huub Frontend Challenge
+# HUUB Frontend Challenge
 
 ## Login Page
 
